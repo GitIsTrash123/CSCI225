@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me & Feedback</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Contact Me & Feedback</h1>
+
+        <!-- Embedded Video -->
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video player"
+                style="border:none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- Feedback Form -->
+        <form name="feedback" method="post" autocomplete="on">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="anonymous" required autofocus>
+            
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="anonymous" required>
+            
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail" placeholder="name@domain.com">
+            
+            <fieldset>
+                <legend>Recommend this website?</legend>
+                <input type="radio" id="yes" name="recommend" value="yes" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="recommend" value="no">
+                <label for="no">No</label>
+            </fieldset>
+            
+            <label for="favsite">Favorite Website:</label>
+            <select id="favsite" name="favsite" required>
+                <option value="">--Select--</option>
+                <option value="Google">Google</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Time">Time</option>
+                <option value="YouTube">YouTube</option>
+            </select>
+            
+            <label for="rating">Rate this website (1-10):</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" value="5">
+            
+            <label for="comment">Additional Comments:</label>
+            <textarea id="comment" name="comment" rows="4" cols="40" maxlength="500" placeholder="Your comments..."></textarea>
+            
+            <!-- Extra HTML5 Features -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color">
+            
+            <label for="website">Your Website:</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com">
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Michael Young. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
