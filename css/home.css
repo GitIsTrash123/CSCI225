@@ -1,0 +1,90 @@
+/* home.css - Assignment 3 styles (Layout Option 1) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --main-bg: url("../img/IMG_6428.png"); /* sample background, replace if needed */
+    --body-bg-color: #f4f7fb;
+    --footer-bg: #2c3e50;
+    --link-color: #1a73e8;
+    --list-color: #2b2b2b;
+}
+
+/* Global */
+*{box-sizing:border-box;font-family: 'Roboto', Arial, sans-serif;}
+html,body{height:100%;margin:0;background-color:var(--body-bg-color);background-image:url('../img/IMG_6428.png');background-size:cover;background-repeat:no-repeat;background-attachment:fixed;}
+
+a{color:var(--link-color);text-decoration:none;}
+a:hover{color:#ff6f61;text-decoration:underline;}
+
+
+/* Navigation - fixed */
+.navbar{position:fixed;top:10px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.85);padding:8px 16px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.15);z-index:1000}
+.navbar ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
+.navbar li{background:#fff;border-radius:8px;padding:6px 10px}
+.navbar li a{color:var(--list-color);font-weight:600}
+
+/* Layout Option 2: center overlapping sections, hide content, show on h1 hover */
+.section-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:680px;max-width:90%;background:rgba(255,255,255,0.95);padding:0;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.18);overflow:hidden}
+.section-overlay h1{margin:0;padding:14px 18px;background:linear-gradient(90deg,#eef5ff,#fff);cursor:pointer;text-transform:uppercase;letter-spacing:2px;border-bottom:1px solid rgba(0,0,0,0.06)}
+.section-overlay h1 a.section-link{color:inherit;text-decoration:none;display:block}
+.section-overlay .content{height:0;opacity:0;visibility:hidden;padding:0 18px;transition:height 0.28s ease, opacity 0.28s ease, visibility 0s linear 0.28s}
+
+/* reveal when hovering the h1 or the section itself */
+.section-overlay:hover .content,
+.section-overlay h1:hover + .content{height:260px;opacity:1;visibility:visible;transition:height 0.28s ease, opacity 0.28s ease}
+
+/* reveal when section is targeted (clicked) or contains focus (keyboard navigation) */
+.section-overlay:target .content,
+.section-overlay:focus-within .content{height:260px;opacity:1;visibility:visible;transition:height 0.28s ease, opacity 0.28s ease}
+
+/* When the link receives focus, make it obvious and allow keyboard users to expand */
+.section-overlay h1 a.section-link:focus{outline:3px dashed #ffefc2;outline-offset:4px}
+
+/* Layout within content */
+.section-overlay .content p{margin:12px 0;line-height:1.6;text-align:justify}
+.section-overlay .content img{float:right;width:180px;height:140px;object-fit:cover;border-radius:8px;margin-left:12px}
+.section-overlay .content ul{margin:12px 0;padding-left:20px}
+.section-overlay .content ol{margin:12px 0;padding-left:20px}
+.section-overlay .content table{width:100%;border-collapse:collapse;margin:12px 0}
+.section-overlay .content th,.section-overlay .content td{border:1px solid #ddd;padding:8px;vertical-align:middle}
+.section-overlay .content tr:nth-child(even){background:#f7f9fc}
+
+.section-overlay{border-right:3px solid #fff;border-bottom:3px solid #fff}
+
+/* smaller h1 hover transform */
+.section-overlay h1{transition:transform 0.22s ease}
+.section-overlay h1:hover{transform:scale(1.02)}
+
+/* Footer - fixed */
+footer{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);width:90%;max-width:980px;background:var(--footer-bg);color:#fff;padding:12px;border-radius:10px;text-align:center}
+
+/* Lists - rounded corners for li */
+.navbar li, .portfolio ul li{border-radius:8px}
+
+/* h1 transforms and transitions */
+h1{transition:transform 0.25s ease, color 0.25s ease}
+h1:hover{transform:scale(1.04) rotate(-1deg);color:#ff6f61}
+
+/* first paragraph box shadow in portfolio - using :first-of-type */
+.portfolio p:first-of-type{box-shadow:0 6px 20px rgba(0,0,0,0.12);padding:8px}
+
+/* Special selector: style first letter of all paragraphs */
+p::first-letter{color:#1a73e8;font-weight:700;font-size:1.2em}
+
+/* Additional styles (at least three extras) */
+/* 1. Responsive adjustments */
+@media (max-width:900px){
+    .introduction{position:static;width:auto;height:auto;margin:16px}
+    .introduction img{width:120px;height:auto;float:none;display:block;margin-top:8px}
+    .assignment, .portfolio, .schedule, .contact{position:static;margin:16px}
+    footer{position:static;margin-top:24px}
+}
+
+/* 2. Focus styles for accessibility */
+a:focus{outline:3px dashed #ffefc2;outline-offset:3px}
+
+/* 3. Subtle hover for nav items */
+.navbar li:hover{transform:translateY(-2px);transition:transform 0.18s ease}
+
+/* Table empty-cells behavior */
+.schedule td:empty{background:#fff;min-height:24px}

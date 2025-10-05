@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CSCI225 Homepage of Your Name</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -18,65 +18,78 @@
     </div>
 
     <!-- Introduction -->
-    <div class="introduction">
-        <h1>Introduction</h1>
-        <p>
-            Hello, my name is Michael Young. I am a student at USCA taking CSCI225. 
-            I enjoy learning about web development and building new projects. 
-            In my free time, I like coding, gaming, and working with new technologies. 
-            I hope to expand my technical skills and apply them in real-world projects.
-        </p>
-        <img src="img/IMG_6428.png" alt="My Picture" width="200">
+    <div id="introduction" class="introduction section-overlay">
+        <h1><a class="section-link" href="#introduction">Introduction</a></h1>
+        <div class="content">
+            <p>
+                Hello, my name is Michael Young. I am a student at USCA taking CSCI225.
+                I enjoy learning about web development and building new projects. In my free time I like
+                coding, gaming, and exploring new technologies. This page is a simple portfolio and
+                schedule for the course. I am interested in front-end development, accessibility, and
+                progressive enhancement. I hope to continue improving my skills by building real-world
+                projects and collaborating with others.
+            </p>
+            <img src="img/IMG_6428.png" alt="My Picture">
+        </div>
     </div>
 
     <!-- Assignment Section -->
-    <div id="assignment" class="assignment">
-        <h1>Assignment</h1>
-        <ol>
-            <li><a href="Assignment1.pdf" target="_blank">Assignment 1 PDF</a></li>
-            <li><a href="contact.html">Contact Me & Feedback</a></li>
-            <li>Assignment 3 (coming soon)</li>
-        </ol>
+    <div id="assignment" class="assignment section-overlay">
+        <h1><a class="section-link" href="#assignment">Assignment</a></h1>
+        <div class="content">
+            <ol>
+                <li><a href="Assignment1.pdf" target="_blank">Assignment 1 PDF</a></li>
+                <li><a href="contact.html">Contact Me & Feedback</a></li>
+                <li>Assignment 3 (coming soon)</li>
+            </ol>
+        </div>
     </div>
 
     <!-- Portfolio -->
-    <div id="portfolio" class="portfolio">
-        <h1>Portfolio</h1>
-        <ul>
-            <li>Project 1 - A simple website using HTML and CSS</li>
-            <li>Project 2 - JavaScript interactive form</li>
-            <li>Project 3 - Personal blog with styled layouts</li>
-        </ul>
+    <div id="portfolio" class="portfolio section-overlay">
+        <h1><a class="section-link" href="#portfolio">Portfolio</a></h1>
+        <div class="content">
+            <ul>
+                <li>Project 1 - A simple website using HTML and CSS</li>
+                <li>Project 2 - JavaScript interactive form</li>
+                <li>Project 3 - Personal blog with styled layouts</li>
+            </ul>
+        </div>
     </div>
 
     <!-- Schedule -->
-    <div class="schedule">
-        <h1>Schedule</h1>
-        <table style="border:1px solid black; border-collapse:collapse;">
-            <tr>
-                <th style="padding:5px;">Day</th>
-                <th style="padding:5px;">Course</th>
-                <th style="padding:5px;">Time</th>
-            </tr>
-            <tr>
-                <td style="padding:5px;">Monday</td>
-                <td style="padding:5px;">CSCI225</td>
-                <td style="padding:5px;">12:00 - 1:15 PM</td>
-            </tr>
-            <tr>
-                <td style="padding:5px;">Wednesday</td>
-                <td style="padding:5px;">CSCI225</td>
-                <td style="padding:5px;">12:00 - 1:15 PM</td>
-            </tr>
-        </table>
+    <div id="schedule" class="schedule section-overlay">
+        <h1><a class="section-link" href="#schedule">Schedule</a></h1>
+        <div class="content">
+            <table class="schedule-table">
+                <tr>
+                    <th>Day</th>
+                    <th>Course</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>CSCI225</td>
+                    <td>12:00 - 1:15 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>CSCI225</td>
+                    <td>12:00 - 1:15 PM</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <!-- Contact Info -->
-    <div id="contact" class="contact">
-        <p>Contact Information</p>
-        <address>
-            <a href="mailto:mjyoung@usca.edu">mjyoung@usca.edu</a>
-        </address>
+    <div id="contact" class="contact section-overlay">
+        <h1><a class="section-link" href="#contact">Contact</a></h1>
+        <div class="content">
+            <p>Contact Information</p>
+            <address>
+                <a href="mailto:mjyoung@usca.edu">mjyoung@usca.edu</a>
+            </address>
+        </div>
     </div>
 
     <!-- Footer -->
